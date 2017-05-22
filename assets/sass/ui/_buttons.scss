@@ -1,0 +1,36 @@
+// ***********************************
+// BUTTONS
+// ***********************************
+
+.btn,
+.btn:visited {
+  font-family: $font-trade-gothic-bold;
+  font-size: 18px;
+  color: $black;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 13px 17px 7px;
+
+  &.no-border {
+    border: 0;
+  }
+
+  &.btn-white {
+    border-color: $white;
+    color: $white;
+  }
+}
+
+@each $color in $colors {
+  $name: nth($color, 1);
+  $hex: nth($color, 2);
+
+  .btn-#{$name} {
+    background: none;
+    border: 2px solid $hex;
+    color: $hex;
+  }
+}

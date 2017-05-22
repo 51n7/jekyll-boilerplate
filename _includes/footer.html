@@ -1,0 +1,35 @@
+<footer>
+  <div class="container">
+    <p>footer</p>
+  </div>
+</footer>
+
+<script src="{{ "/assets/js/jquery-3.2.1.min.js" | relative_url }}"></script><!-- jquery -->
+<script src="{{ "/assets/js/jquery.mmenu.all.js" | relative_url }}"></script><!-- mobile menu -->
+
+<script>
+
+  $( document ).ready(function() {
+
+    // ***********************************
+    // MOBILE MENU
+    // ***********************************
+
+    var nav = $('body > nav');
+
+    nav.mmenu({
+      offCanvas: {
+        position  : "right"
+      },
+      slidingSubmenus: false,
+      navbar: { title: null }
+    });
+    
+    $('.navbar-toggle').click(function(e) {
+      e.preventDefault();
+      nav.data( "mmenu" ).open();
+    });
+
+  });
+
+</script>

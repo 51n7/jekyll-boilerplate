@@ -1,0 +1,103 @@
+// ***********************************
+// LAYOUT
+// ***********************************
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include clearfix;
+
+  @include mobile {
+    width: 750px;
+  }
+
+  @include tablet {
+    width: 970px;
+  }
+
+  @include desktop {
+    width: 1170px;
+  }
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  @include clearfix;
+}
+
+[class*='col-'] {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} { 
+    width: 100% / 12 * $i;
+  }
+}
+
+section {
+  padding: 40px 0;
+}
+
+// Flex Grid Rows
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    background-size: cover;
+    background-position: center;
+    float: none;
+    padding: 30px;
+    position: relative;
+    // min-height: 240px;
+
+    @include desktop {
+      padding: 49px;
+      // min-height: 0;
+    }
+
+    &.height-lg { min-height: 586px; }
+
+    &.no-padding { padding: 0; }
+  }
+
+  &.column {
+    height: 100%;
+
+    @include desktop {
+      flex-direction: column;
+    }
+    
+    & > * { flex: 1; }
+  }
+
+  &.gutters {
+
+    & > * {
+      margin-top: 30px;
+      &:first-child { margin-top: 0; }
+    }
+
+    @include tablet {
+      margin: 0 -15px;
+      flex-wrap: nowrap;
+
+      & > * {
+        margin: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+

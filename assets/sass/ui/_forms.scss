@@ -1,0 +1,39 @@
+// ***********************************
+// FORMS
+// ***********************************
+
+form {
+  position: relative;
+
+  .form-control,
+  .form-control:focus {
+    font-size: 24px;
+    padding: 10px 25px 5px;
+    height: 53px;
+    border: 1px solid #e9e8e7;
+    box-shadow: none;
+    outline: none;
+  }
+
+  button[type="reset"] {
+    width: 14px;
+    height: 14px;
+    background: url("../images/icon-clear.png");
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  input[type="search"]:not(:valid) ~ [type="reset"] {
+    display: none;
+  }
+
+  input[type="submit"] {
+    // 
+  }
+  
+}
+

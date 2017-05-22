@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include meta.html %}
+
+  <body class="{{ page.title | downcase }}">
+
+    {% include nav.html %}
+
+    <div>
+      <div class="main-nav">
+        <div class="container">
+
+          <a href="/" class="logo"><img src="/assets/images/logo.png" alt="logo"></a>
+          
+          <a href="#menu" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          
+          {% include nav.html %}
+
+        </div>
+      </div>
+
+      {{ content }}
+
+      {% include footer.html %}
+    </div>
+    
+  </body>
+</html>

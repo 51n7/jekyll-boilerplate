@@ -1,0 +1,120 @@
+// ***********************************
+// LINKS
+// ***********************************
+
+a, a:visited {
+  text-decoration: none;
+  color: $link_color;
+  // @include transition-all(.5s);
+  font-size: 16px;
+}
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  color: $link_hover;
+  // @include transition-all(.5s);
+}
+
+
+// ***********************************
+// TYPOGRAPHY
+// ***********************************
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-trade-gothic-bold;
+  text-transform: uppercase;
+  line-height: 1em;
+  clear: both;
+  font-weight: $font-weight-title;
+}
+
+h1 { font-size: 66px; }
+h2 { font-size: 40px; @include desktop { font-size: 50px; } }
+h3 { font-size: 40px; }
+h4 { font-size: 30px; }
+h5 { font-size: 21px; }
+
+p {
+  margin-bottom: 1.5em;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+p.txt-larger {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+p.txt-large {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+p.txt-small {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+hr {
+  margin-top: 73px;
+  margin-bottom: 73px;
+  border-top: 1px solid #e2e1df;
+}
+
+.quote {
+
+  @include desktop {
+    &.small {
+      padding-right: 20%;
+      padding-left: 20%;
+    }
+    
+    &.smaller {
+      padding-right: 25%;
+      padding-left: 25%;
+    }
+  }
+  
+  p {
+    font-family: $font-caecilia-light;
+    font-size: 32px;
+    margin: 0;
+    position: relative;
+  }
+
+  p + p {
+    font-size: 19px;
+    // text-align: right;
+    // margin: 17px 150px 0 0;
+  }
+}
+
+.ldquo,
+.rdquo {
+  position: relative;
+  width: 28px;
+  height: 22px;
+  display: inline-block;
+  text-indent: -99999px;
+  background-repeat: no-repeat;
+}
+
+.ldquo {
+  // position: absolute;
+  // top: 0;
+  // left: -43px;
+  bottom: -1px;
+  margin-right: 15px;
+  background-image: url("../images/quote-left-black.png");
+
+}
+
+.rdquo {
+  bottom: -21px;
+  margin-left: 15px;
+  background-image: url("../images/quote-right-black.png");
+}
+
+.txt-white {
+  .ldquo { background-image: url("../images/quote-left-white.png"); }
+  .rdquo { background-image: url("../images/quote-right-white.png"); }
+}

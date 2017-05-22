@@ -1,0 +1,42 @@
+// ***********************************
+// BASE
+// ***********************************
+
+body, html { height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $body-color;
+  font-family: $font-caecilia-roman;
+  font-weight: $font-weight-body;
+  color: $body-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Set Colors
+@each $color in $colors {
+  $name: nth($color, 1);
+  $hex: nth($color, 2);
+
+  .bg-#{$name} {
+    background-color: $hex;
+  }
+
+}
+
+.txt-white { color: $white; }
+.txt-black { color: $black; }
+
+.txt-center { text-align: center; }
+.txt-left { text-align: left; }
+.txt-right { text-align: right; }
+

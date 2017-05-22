@@ -1,0 +1,66 @@
+// ***********************************
+// BLOCK
+// ***********************************
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  .content {
+    display: block;
+    padding: 56px 24px 40px 40px;
+
+    h4, h5, h6 {
+      text-transform: none;
+    }
+
+    h4 {
+      font-family: $font-caecilia-roman;
+      font-size: 28px;
+      line-height: 32px;
+      margin: 0 0 21px 0;
+    }
+
+    h6 {
+      font-family: $font-trade-gothic;
+      font-size: 20px;
+      margin: 0 0 20px 0;
+    }
+
+    h5 {
+      font-family: $font-trade-gothic;
+      font-size: 18px;
+      line-height: 25px;
+      // margin-bottom: 35px;
+    }
+
+    p {
+      font-family: $font-caecilia-roman;
+      font-size: 16px;
+      line-height: 25px;
+      margin-bottom: 11px;
+    }
+
+    a {
+      font-family: $font-trade-gothic-bold;
+      color: #fff;
+    }
+
+    .btn {
+      border-width: 2px;
+      min-width: 216px;
+      margin-top: 21px;
+      padding: 19px 20px 13px;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .cta {
+    border-top: 13px solid rgba($black, 0.1);
+  }
+  
+}
